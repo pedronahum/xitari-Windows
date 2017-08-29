@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}</ProjectGuid>
+    <RootNamespace>XitariLibraryCSBinding</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc />
+    <CLRSupport />
+    <WindowsAppContainer />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\XITARI.Common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\XITARI.Common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>Xitari.Core.CSBinding-$(XitariComponentVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>Xitari.Core.CSBinding-$(XitariComponentVersion)</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\agents;$(SolutionDir)Source\common;$(SolutionDir)Source\controllers;$(SolutionDir)Source\emucore;$(SolutionDir)Source\environment;$(SolutionDir)Source\games;$(SolutionDir)Source\os_dependent;$(SolutionDir)Source\zlib </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_USRDLL;_WINDOWS;_WINDLL;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Xitari.Core$(OutputSuffix)-$(XitariComponentVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <Profile>true</Profile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="XitariALE.h" />
+    <ClInclude Include="xitari_cs_wrap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="XitariALE.cpp" />
+    <ClCompile Include="xitari_cs_wrap.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="xitari_cs.i">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SWIG_PATH)\swig.exe -c++ -csharp -D_MSC_VER -Werror -v -I$(SolutionDir)Source\XITARIv1LibraryDll -I$(SolutionDir)Source -I$(SolutionDir)Source\agents -I$(SolutionDir)Source\common -I$(SolutionDir)Source\controllers -I$(SolutionDir)Source\emucore -I$(SolutionDir)Source\environment -I$(SolutionDir)Source\games -I$(SolutionDir)Source\os_dependent -I$(SolutionDir)Source\zlib -namespace Xitari -outdir $(SolutionDir)bindings\csharp\XitariLibraryManagedDll\SwigProxyClasses -dllimport Xitari.Core.CSBinding-$(XitariComponentVersion).dll xitari_cs.i
+
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xitari_cs_wrap.cxx; xitari_cs_warp.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Source;$(SolutionDir)Source\agents;$(SolutionDir)Source\common;$(SolutionDir)Source\controllers;$(SolutionDir)Source\emucore;$(SolutionDir)Source\environment;$(SolutionDir)Source\games;$(SolutionDir)Source\os_dependent;$(SolutionDir)Source\zlib;$(SolutionDir)bindings\XitariLibraryCSBinding\XitariManagedCommon.i;$(SolutionDir)bindings\XitariLibraryCSBinding\std_unordered_map.i</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="std_unordered_map.i" />
+    <None Include="XitariManagedCommon.i" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

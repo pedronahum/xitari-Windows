@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XITARI Core", "XITARI Core", "{FC11D010-636E-4784-8290-A59FA076FAC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{21CA9BBA-67D2-436C-BA30-E7BD70880B52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{788B2238-D15A-4D22-AF1C-9371946E5D87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89C83757-6D01-4B4A-B5D6-3D90FF9A6795}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XITARIv1LibraryDll", "Source\XITARIv1LibraryDll\XITARIv1LibraryDll.vcxproj", "{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XitariLibraryManagedDll", "bindings\csharp\XitariLibraryManagedDll\XitariLibraryManagedDll.csproj", "{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC} = {A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57} = {9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XitariLibraryCSBinding", "XitariLibraryCSBinding\XitariLibraryCSBinding.vcxproj", "{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC} = {A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp-examples", "CSharp-examples", "{0BB4CDC4-A342-488D-9EC3-163F3357E577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runXitari", "Examples\CSharp-examples\runXitari\runXitari.csproj", "{3FA1C989-37C4-4F22-A488-CB9143C46426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Debug|x64.ActiveCfg = Debug|x64
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Debug|x64.Build.0 = Debug|x64
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Release|x64.ActiveCfg = Release|x64
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Release|x64.Build.0 = Release|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Debug|x64.ActiveCfg = Debug|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Debug|x64.Build.0 = Debug|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Release|x64.ActiveCfg = Release|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Release|x64.Build.0 = Release|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Debug|x64.ActiveCfg = Debug|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Debug|x64.Build.0 = Debug|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Release|x64.ActiveCfg = Release|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Release|x64.Build.0 = Release|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Debug|x64.ActiveCfg = Debug|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Debug|x64.Build.0 = Debug|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Release|x64.ActiveCfg = Release|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21CA9BBA-67D2-436C-BA30-E7BD70880B52} = {FC11D010-636E-4784-8290-A59FA076FAC8}
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC} = {FC11D010-636E-4784-8290-A59FA076FAC8}
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F} = {21CA9BBA-67D2-436C-BA30-E7BD70880B52}
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57} = {21CA9BBA-67D2-436C-BA30-E7BD70880B52}
+		{0BB4CDC4-A342-488D-9EC3-163F3357E577} = {788B2238-D15A-4D22-AF1C-9371946E5D87}
+		{3FA1C989-37C4-4F22-A488-CB9143C46426} = {0BB4CDC4-A342-488D-9EC3-163F3357E577}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3EF6771-C340-490E-A797-96F3F9190CC1}
+	EndGlobalSection
+EndGlobal

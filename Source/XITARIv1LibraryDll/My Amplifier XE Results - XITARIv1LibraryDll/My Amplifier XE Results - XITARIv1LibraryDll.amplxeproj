@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption>localhost</connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1503785758</timestamp>
+  <hostname>DESKTOP-3V49OQM</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Amplifier XE 2017 Update 3</product>
+  <buildNumber type="s32_t">510739</buildNumber>
+  <logicalCPUCount type="s32_t">12</logicalCPUCount>
+  <CPUFrequency type="s64_t">3300000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">63</CPUModel>
+  <CPUStepping type="s32_t">2</CPUStepping>
+  <CPUBrandName>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz</CPUBrandName>
+  <isa>avx</isa>
+ </rdmgr>
+ <All_Configurations-All_Platforms>
+  <target_settings>
+   <inherited_state type="bool">false</inherited_state>
+   <selected_workload>
+    <localhost>launch</localhost>
+   </selected_workload>
+   <result_dir>
+    <localhost>C:\repos\xitari\Source\XITARIv1LibraryDll\My Amplifier XE Results - XITARIv1LibraryDll</localhost>
+   </result_dir>
+   <workloads>
+    <localhost>
+     <attach type="pointer" type_id="dasID_cctrl2::AttachWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>attach</targetName>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <attach.process_name>Xitari.Core-.exe</attach.process_name>
+       <attach.pid type="null"></attach.pid>
+       <result_directory.path>C:\repos\xitari\Source\XITARIv1LibraryDll\My Amplifier XE Results - XITARIv1LibraryDll\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>sym=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\bin</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\gcc-4.6.3\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft MPI\Bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\WiFi\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Intel\WirelessCommon</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\130\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git\cmd</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft\Web Platform Installer</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Java\jdk1.7.0_55\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\spark\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\Azure\CLI\wbin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\synedra\ViewPersonal</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\nodejs</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft DNX\Dnvm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\dotnet</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Rust stable GNU 1.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\GtkSharp\2.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\TortoiseGit\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Amazon\AWSCLI</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\PuTTY</value>
+        </item>
+        <item>
+         <value>bin=C:\ffmpeg\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\CMake\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git LFS</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\scoop\shims</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Library\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Roaming\npm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\West Wind WebSurge</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Microsoft\WindowsApps</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\netCDF</value>
+        </item>
+        <item>
+         <value>bin=c:\local\CNTKCustomMKL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft VS Code\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Graphviz2.38\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Programs\Python\Python35\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Docker Toolbox</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\cygwin64\bin</value>
+        </item>
+        <item>
+         <value>bin=D:\swig\swigwin-3.0.12</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeSystemWide</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>enableRing</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>followChildStrategy</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>auto</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetRingBuffer</id>
+         <value type="s32_t">0</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>attach</value>
+        </contextValue>
+        <contextValue>
+         <id>tracingMode</id>
+         <value type="null"></value>
+        </contextValue>
+       </context>
+      </workload>
+     </attach>
+     <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>launch</targetName>
+       <launch_app.inherit_sys_environment type="bool">true</launch_app.inherit_sys_environment>
+       <launch_app.environment>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017\windows\redist\intel64\compiler;%PATH%&#13;
+PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017\windows\redist\intel64\compiler;%PATH%</launch_app.environment>
+       <launch_app.environment_prepend>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017\windows\redist\intel64\compiler;</launch_app.environment_prepend>
+       <launch.userapppath>C:\repos\xitari\x64\Release\Xitari.Core.exe</launch.userapppath>
+       <launch_app.app_to_launch>C:\repos\xitari\x64\Release\Xitari.Core.exe</launch_app.app_to_launch>
+       <launch_app.app_parameters>-player_agent random_agent -max_num_episodes 30 pong.bin</launch_app.app_parameters>
+       <launch_app.working_folder>C:\repos\xitari\x64\Release</launch_app.working_folder>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <launch.userappworkdir>C:\repos\xitari\x64\Release</launch.userappworkdir>
+       <result_directory.path>C:\repos\xitari\Source\XITARIv1LibraryDll\My Amplifier XE Results - XITARIv1LibraryDll\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>sym=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\bin</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\gcc-4.6.3\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft MPI\Bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\WiFi\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Intel\WirelessCommon</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\130\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git\cmd</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft\Web Platform Installer</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Java\jdk1.7.0_55\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\spark\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\Azure\CLI\wbin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\synedra\ViewPersonal</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\nodejs</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft DNX\Dnvm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\dotnet</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Rust stable GNU 1.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\GtkSharp\2.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\TortoiseGit\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Amazon\AWSCLI</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\PuTTY</value>
+        </item>
+        <item>
+         <value>bin=C:\ffmpeg\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\CMake\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git LFS</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\scoop\shims</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Library\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Roaming\npm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\West Wind WebSurge</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Microsoft\WindowsApps</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\netCDF</value>
+        </item>
+        <item>
+         <value>bin=c:\local\CNTKCustomMKL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft VS Code\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Graphviz2.38\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Programs\Python\Python35\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Docker Toolbox</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\cygwin64\bin</value>
+        </item>
+        <item>
+         <value>bin=D:\swig\swigwin-3.0.12</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeSystemWide</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>enableRing</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>followChildStrategy</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>auto</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetRingBuffer</id>
+         <value type="s32_t">0</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>launch</value>
+        </contextValue>
+        <contextValue>
+         <id>traceMpi</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>tracingMode</id>
+         <value type="null"></value>
+        </contextValue>
+       </context>
+      </workload>
+     </launch>
+     <system type="pointer" type_id="dasID_cctrl2::SystemWideWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>system</targetName>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <result_directory.path>C:\repos\xitari\Source\XITARIv1LibraryDll\My Amplifier XE Results - XITARIv1LibraryDll\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>sym=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari\x64\Release</value>
+        </item>
+        <item>
+         <value>bin=C:\repos\xitari</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VC_ExecutablePath_x86)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/repos\xitari\Source\XITARIv1LibraryDll\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\SysWow64</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27</value>
+        </item>
+        <item>
+         <value>bin=C:\Python27\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\bin</value>
+        </item>
+        <item>
+         <value>bin=c:\Rtools\gcc-4.6.3\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft MPI\Bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\iCLS Client</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\Windows\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\DAL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\Intel(R) Management Engine Components\IPT</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Intel\WiFi\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Common Files\Intel\WirelessCommon</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\130\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git\cmd</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft\Web Platform Installer</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\120\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Skype\Phone</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Java\jdk1.7.0_55\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\spark\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\Azure\CLI\wbin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\synedra\ViewPersonal</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\nodejs</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft DNX\Dnvm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\dotnet</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Rust stable GNU 1.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft SQL Server\110\Tools\Binn</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\GtkSharp\2.12\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\TortoiseGit\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Amazon\AWSCLI</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\PuTTY</value>
+        </item>
+        <item>
+         <value>bin=C:\ffmpeg\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\CMake\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git LFS</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\scoop\shims</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\Anaconda3\Library\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Roaming\npm</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\West Wind WebSurge</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Microsoft\WindowsApps</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\netCDF</value>
+        </item>
+        <item>
+         <value>bin=c:\local\CNTKCustomMKL</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft VS Code\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Graphviz2.38\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Programs\Python\Python35\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Docker Toolbox</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\email\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\cygwin64\bin</value>
+        </item>
+        <item>
+         <value>bin=D:\swig\swigwin-3.0.12</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>allowMultipleRuns</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>analyzeKvmGuest</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>cpuMask</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>customCollector</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>enableRing</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>followChild</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestKallsyms</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmGuestModules</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>kvmProfileGuest</id>
+         <value type="null"></value>
+        </contextValue>
+        <contextValue>
+         <id>mrteMode</id>
+         <value>native</value>
+        </contextValue>
+        <contextValue>
+         <id>targetDurationType</id>
+         <value>short</value>
+        </contextValue>
+        <contextValue>
+         <id>targetRingBuffer</id>
+         <value type="s32_t">0</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>system</value>
+        </contextValue>
+        <contextValue>
+         <id>tracingMode</id>
+         <value type="null"></value>
+        </contextValue>
+       </context>
+      </workload>
+     </system>
+    </localhost>
+   </workloads>
+   <result_pattern>
+    <localhost>r@@@{at}</localhost>
+   </result_pattern>
+  </target_settings>
+  <analysis_type_settings>
+   <selected_analysis_type_path>C:\Program Files (x86)\IntelSWTools\VTune Amplifier XE 2017\config\analysis_type\basic_hotspots.cfg</selected_analysis_type_path>
+  </analysis_type_settings>
+ </All_Configurations-All_Platforms>
+ <contextValues type="bag"/>
+</root>
