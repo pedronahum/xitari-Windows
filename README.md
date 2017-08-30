@@ -3,15 +3,20 @@
 <img align="right" src="ale.gif" width=50>
 
 
-.Net wrapper for the [Arcade Learning Environment](http://www.arcadelearningenvironment.org/)/Xitari. 
+Windows wrappers for the [Arcade Learning Environment](https://github.com/mgbellemare/Arcade-Learning-Environment/)/Xitari. 
 ============
 
-xitari-vs2017 are .NET bindings to the Arcade Learning Environment library published here:
+xitari-Windows are bindings to Deepmind´s xitari, published here:
 
 https://github.com/deepmind/xitari.git
 
-This repository builds a strongly-typed .NET API for use from C# and/or F#. The API binding is currently being tested. 
+This repository currently builds a strongly-typed .NET API for use from C# and/or F#. The API binding is currently being tested and functionality will be added to facility the use of Windows-based deep learning frameworks. 
 
-Please note the native libraries have been tested in (Release) Windows 64 bit mode using VS 2017. 
+Dependencies:
+    - An environmental variable named SWIG_PATH pointing to [Simplified Wrapper and Interface Generator](http://www.swig.org) executable (.exe) file. This repo has been tested with Swig 3.0.10, available from [here](https://sourceforge.net/projects/swig/files/swigwin/)
+
+    - VS 2017, including "Desktop development with C++" & ".Net desktop development". This repo has been tested with Visual Studio Community 2017 Version 15.3.2
+
+
 
 
