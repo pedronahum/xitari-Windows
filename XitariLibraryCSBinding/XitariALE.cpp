@@ -112,12 +112,15 @@ int XitariALE::ale_numLegalActions()
 }
 
 // ReSharper disable once CppMemberFunctionMayBeConst
-void XitariALE::ale_legalActions(int *actions,
-	size_t actions_size)
+std::vector<int> XitariALE::ale_legalActions(size_t actions_size)
 {
+	int* actions = static_cast<int *>(malloc(sizeof(int) * actions_size));
 	const std::vector<enum ale::Action>& legal_actions = _ale->getMinimalActionSet();
 	assert(actions_size == legal_actions.size());
 	std::copy(legal_actions.begin(), legal_actions.end(), actions);
+	std::vector<int> dataVec;
+	dataVec.insert(dataVec.end(), &actions[0], &actions[actions_size]);
+	return dataVec;
 }
 
 int XitariALE::ale_livesRemained() const

@@ -3378,15 +3378,17 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_XitariALE_ale_numLegalActions(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_legalActions(void * jarg1, void * jarg2, unsigned long jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_XitariALE_ale_legalActions(void * jarg1, unsigned long jarg2) {
+  void * jresult ;
   XitariALE *arg1 = (XitariALE *) 0 ;
-  int *arg2 = (int *) 0 ;
-  size_t arg3 ;
+  size_t arg2 ;
+  std::vector< int > result;
   
   arg1 = (XitariALE *)jarg1; 
-  arg2 = (int *)jarg2; 
-  arg3 = (size_t)jarg3; 
-  (arg1)->ale_legalActions(arg2,arg3);
+  arg2 = (size_t)jarg2; 
+  result = (arg1)->ale_legalActions(arg2);
+  jresult = new std::vector< int >((const std::vector< int > &)result); 
+  return jresult;
 }
 
 

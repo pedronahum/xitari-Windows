@@ -638,7 +638,7 @@ class XitariLibPINVOKE {
   public static extern int XitariALE_ale_numLegalActions(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_legalActions")]
-  public static extern void XitariALE_ale_legalActions(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
+  public static extern global::System.IntPtr XitariALE_ale_legalActions(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_livesRemained")]
   public static extern int XitariALE_ale_livesRemained(global::System.Runtime.InteropServices.HandleRef jarg1);

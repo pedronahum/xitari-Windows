@@ -97,8 +97,9 @@ public class XitariALE : global::System.IDisposable {
     return ret;
   }
 
-  public void ale_legalActions(SWIGTYPE_p_int actions, uint actions_size) {
-    XitariLibPINVOKE.XitariALE_ale_legalActions(swigCPtr, SWIGTYPE_p_int.getCPtr(actions), actions_size);
+  public IntVector ale_legalActions(uint actions_size) {
+    IntVector ret = new IntVector(XitariLibPINVOKE.XitariALE_ale_legalActions(swigCPtr, actions_size), true);
+    return ret;
   }
 
   public int ale_livesRemained() {

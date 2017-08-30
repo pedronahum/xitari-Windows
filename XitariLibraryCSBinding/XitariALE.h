@@ -62,8 +62,7 @@ public:
 	int ale_numLegalActions();
 
 	// Returns the valid actions for a game
-	void ale_legalActions(int *actions,
-		size_t actions_size);
+	std::vector<int> ale_legalActions(size_t actions_size);
 
 	// Returns the number of remaining lives for a game
 	int ale_livesRemained() const;

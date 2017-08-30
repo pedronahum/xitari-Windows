@@ -12,8 +12,6 @@
 %include <attribute.i>
 #include <exception.i>
 
-//typedef std::size_t Size;
-
 #ifdef SWIGCSHARP
 %include <arrays_csharp.i>
 #endif
