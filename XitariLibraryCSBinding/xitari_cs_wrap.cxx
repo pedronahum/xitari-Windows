@@ -802,6 +802,16 @@ SWIGINTERN bool std_vector_Sl_double_Sg__Remove(std::vector< double > *self,doub
         }
         return false;
       }
+
+struct SWIG_null_deleter {
+  void operator() (void const *) const {
+  }
+};
+#define SWIG_NO_NULL_DELETER_0 , SWIG_null_deleter()
+#define SWIG_NO_NULL_DELETER_1
+#define SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW
+#define SWIG_NO_NULL_DELETER_SWIG_POINTER_OWN
+
 SWIGINTERN std::vector< float > *new_std_vector_Sl_float_Sg___SWIG_2(int capacity){
         std::vector< float >* pv = 0;
         if (capacity >= 0) {
@@ -2360,8 +2370,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_delete_DoubleVector(void * jarg1) {
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Clear(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   (arg1)->clear();
 }
 
@@ -2369,9 +2382,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Clear(void * jarg1) {
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Add(void * jarg1, float jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp2 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   temp2 = (float)jarg2; 
   arg2 = &temp2; 
   (arg1)->push_back((float const &)*arg2);
@@ -2381,9 +2397,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Add(void * jarg1, float ja
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_FloatVector_size(void * jarg1) {
   unsigned long jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
+  std::shared_ptr< std::vector< float > const > *smartarg1 = 0 ;
   std::vector< float >::size_type result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   result = ((std::vector< float > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
@@ -2393,9 +2412,12 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_FloatVector_size(void * jarg1
 SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_FloatVector_capacity(void * jarg1) {
   unsigned long jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
+  std::shared_ptr< std::vector< float > const > *smartarg1 = 0 ;
   std::vector< float >::size_type result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   result = ((std::vector< float > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
@@ -2405,8 +2427,11 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_FloatVector_capacity(void * j
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_reserve(void * jarg1, unsigned long jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float >::size_type arg2 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (std::vector< float >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
@@ -2417,7 +2442,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_FloatVector__SWIG_0() {
   std::vector< float > *result = 0 ;
   
   result = (std::vector< float > *)new std::vector< float >();
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  std::vector<float> >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
@@ -2427,13 +2454,16 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_FloatVector__SWIG_1(void * jarg1
   std::vector< float > *arg1 = 0 ;
   std::vector< float > *result = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1;
+  
+  arg1 = (std::vector< float > *)(((std::shared_ptr< const std::vector<float> > *)jarg1) ? ((std::shared_ptr< const std::vector<float> > *)jarg1)->get() : 0);
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & reference is null", 0);
     return 0;
   } 
   result = (std::vector< float > *)new std::vector< float >((std::vector< float > const &)*arg1);
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  std::vector<float> >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
@@ -2452,7 +2482,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_FloatVector__SWIG_2(int jarg1) {
     return 0;
   }
   
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  std::vector<float> >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
@@ -2461,9 +2493,12 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Xitari_FloatVector_getitemcopy(void * jarg1,
   float jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   try {
     result = (float)std_vector_Sl_float_Sg__getitemcopy(arg1,arg2);
@@ -2482,9 +2517,12 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Xitari_FloatVector_getitem(void * jarg1, int
   float jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float *result = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   try {
     result = (float *) &std_vector_Sl_float_Sg__getitem(arg1,arg2);
@@ -2503,9 +2541,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_setitem(void * jarg1, int 
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   float *arg3 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp3 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   temp3 = (float)jarg3; 
   arg3 = &temp3; 
@@ -2523,11 +2564,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_setitem(void * jarg1, int 
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_AddRange(void * jarg1, void * jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   std::vector< float > *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
-  arg2 = (std::vector< float > *)jarg2;
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (std::vector< float > *)(((std::shared_ptr< const std::vector<float> > *)jarg2) ? ((std::shared_ptr< const std::vector<float> > *)jarg2)->get() : 0);
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & reference is null", 0);
     return ;
   } 
   std_vector_Sl_float_Sg__AddRange(arg1,(std::vector< float > const &)*arg2);
@@ -2539,9 +2584,12 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_FloatVector_GetRange(void * jarg1, i
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   int arg3 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   std::vector< float > *result = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
@@ -2556,7 +2604,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_FloatVector_GetRange(void * jarg1, i
     return 0;
   }
   
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  std::vector<float> >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
@@ -2565,9 +2615,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Insert(void * jarg1, int j
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   float *arg3 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp3 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   temp3 = (float)jarg3; 
   arg3 = &temp3; 
@@ -2586,12 +2639,16 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_InsertRange(void * jarg1, 
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< float > *)jarg3;
+  
+  arg3 = (std::vector< float > *)(((std::shared_ptr< const std::vector<float> > *)jarg3) ? ((std::shared_ptr< const std::vector<float> > *)jarg3)->get() : 0);
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & reference is null", 0);
     return ;
   } 
   try {
@@ -2608,8 +2665,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_InsertRange(void * jarg1, 
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_RemoveAt(void * jarg1, int jarg2) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   try {
     std_vector_Sl_float_Sg__RemoveAt(arg1,arg2);
@@ -2626,8 +2686,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_RemoveRange(void * jarg1, 
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   int arg3 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
@@ -2663,15 +2726,20 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_FloatVector_Repeat(float jarg1, int 
     return 0;
   }
   
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  std::vector<float> >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Reverse__SWIG_0(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   std_vector_Sl_float_Sg__Reverse__SWIG_0(arg1);
 }
 
@@ -2680,8 +2748,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_Reverse__SWIG_1(void * jar
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   int arg3 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
@@ -2703,12 +2774,16 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_FloatVector_SetRange(void * jarg1, int
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   int arg2 ;
   std::vector< float > *arg3 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< float > *)jarg3;
+  
+  arg3 = (std::vector< float > *)(((std::shared_ptr< const std::vector<float> > *)jarg3) ? ((std::shared_ptr< const std::vector<float> > *)jarg3)->get() : 0);
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< float > const & reference is null", 0);
     return ;
   } 
   try {
@@ -2726,10 +2801,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_FloatVector_Contains(void * ja
   unsigned int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp2 ;
   bool result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   temp2 = (float)jarg2; 
   arg2 = &temp2; 
   result = (bool)std_vector_Sl_float_Sg__Contains(arg1,(float const &)*arg2);
@@ -2742,10 +2820,13 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_FloatVector_IndexOf(void * jarg1, float
   int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp2 ;
   int result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   temp2 = (float)jarg2; 
   arg2 = &temp2; 
   result = (int)std_vector_Sl_float_Sg__IndexOf(arg1,(float const &)*arg2);
@@ -2758,10 +2839,13 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_FloatVector_LastIndexOf(void * jarg1, f
   int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp2 ;
   int result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   temp2 = (float)jarg2; 
   arg2 = &temp2; 
   result = (int)std_vector_Sl_float_Sg__LastIndexOf(arg1,(float const &)*arg2);
@@ -2774,10 +2858,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_FloatVector_Remove(void * jarg
   unsigned int jresult ;
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
   float *arg2 = 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   float temp2 ;
   bool result;
   
-  arg1 = (std::vector< float > *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
   temp2 = (float)jarg2; 
   arg2 = &temp2; 
   result = (bool)std_vector_Sl_float_Sg__Remove(arg1,(float const &)*arg2);
@@ -2788,9 +2875,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_FloatVector_Remove(void * jarg
 
 SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_delete_FloatVector(void * jarg1) {
   std::vector< float > *arg1 = (std::vector< float > *) 0 ;
+  std::shared_ptr< std::vector< float > > *smartarg1 = 0 ;
   
-  arg1 = (std::vector< float > *)jarg1; 
-  delete arg1;
+  
+  smartarg1 = (std::shared_ptr<  std::vector<float> > *)jarg1;
+  arg1 = (std::vector<float> *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
 }
 
 

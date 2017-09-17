@@ -48,6 +48,11 @@ IGNORE_FUNCTION _wcsdup;
 #error "MAKE_GETTER is not defined."
 #endif
 
+
+// shared_ptr definitions
+%shared_ptr(std::vector<float>);
+
+
 // temaplate definitions
 #ifdef SWIGCSHARP
 // int/bool/double/float are already enabled with SWIG_STD_VECTOR_ENHANCED in std_vector.i
@@ -59,9 +64,6 @@ SWIG_STD_VECTOR_ENHANCED(size_t)
 %template(DoubleVector) std::vector<double>;
 %template(FloatVector) std::vector<float>;
 %template(BoolVector) std::vector<bool>;
-
-
-
 
 // ignore items not needed.
 #define IGNORE_FUNCTION %rename("$ignore", %$isfunction, fullname=1)

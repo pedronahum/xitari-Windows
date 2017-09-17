@@ -10,7 +10,7 @@
 
 namespace Xitari {
 
-public class XitariLib {
+public partial class XitariLib {
 }
 
 }

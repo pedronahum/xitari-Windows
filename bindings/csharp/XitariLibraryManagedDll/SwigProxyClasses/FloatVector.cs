@@ -14,10 +14,10 @@ public class FloatVector : global::System.IDisposable, global::System.Collection
     , global::System.Collections.Generic.IList<float>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
+  private bool swigCMemOwnBase;
 
   internal FloatVector(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -32,8 +32,8 @@ public class FloatVector : global::System.IDisposable, global::System.Collection
   public virtual void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
           XitariLibPINVOKE.delete_FloatVector(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -202,24 +202,29 @@ public class FloatVector : global::System.IDisposable, global::System.Collection
 
   public void Clear() {
     XitariLibPINVOKE.FloatVector_Clear(swigCPtr);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(float x) {
     XitariLibPINVOKE.FloatVector_Add(swigCPtr, x);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
     uint ret = XitariLibPINVOKE.FloatVector_size(swigCPtr);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
     uint ret = XitariLibPINVOKE.FloatVector_capacity(swigCPtr);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
     XitariLibPINVOKE.FloatVector_reserve(swigCPtr, n);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public FloatVector() : this(XitariLibPINVOKE.new_FloatVector__SWIG_0(), true) {
@@ -291,6 +296,7 @@ public class FloatVector : global::System.IDisposable, global::System.Collection
 
   public void Reverse() {
     XitariLibPINVOKE.FloatVector_Reverse__SWIG_0(swigCPtr);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
@@ -305,21 +311,25 @@ public class FloatVector : global::System.IDisposable, global::System.Collection
 
   public bool Contains(float value) {
     bool ret = XitariLibPINVOKE.FloatVector_Contains(swigCPtr, value);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(float value) {
     int ret = XitariLibPINVOKE.FloatVector_IndexOf(swigCPtr, value);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(float value) {
     int ret = XitariLibPINVOKE.FloatVector_LastIndexOf(swigCPtr, value);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(float value) {
     bool ret = XitariLibPINVOKE.FloatVector_Remove(swigCPtr, value);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

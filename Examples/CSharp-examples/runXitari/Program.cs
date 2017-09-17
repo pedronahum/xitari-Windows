@@ -10,6 +10,7 @@ namespace runXitari
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("======== Testing ALE in C# ========");
             var rnd = new Random();
             var sw = new Stopwatch();
             var ale = new Xitari.XitariALE("pong.bin");
