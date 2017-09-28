@@ -1,19 +1,21 @@
 
+
 #include <cstdint>
 #include "XitariALE.h"
 #include <allocators>
 #include <mutex>
 //$(SWIG_PATH)\swig.exe -c++ -csharp -D_MSC_VER -Werror -I$(SolutionDir)Source\XITARIv1LibraryDll -I$(SolutionDir)Source -I$(SolutionDir)Source\agents -I$(SolutionDir)Source\common -I$(SolutionDir)Source\controllers -I$(SolutionDir)Source\emucore -I$(SolutionDir)Source\environment -I$(SolutionDir)Source\games -I$(SolutionDir)Source\os_dependent -I$(SolutionDir)Source\zlib -namespace Xitari -outdir  $(SolutionDir)XitariLibraryCSBinding\SwigProxyClasses -dllimport Xitari.Core.CSBinding-$(CntkComponentVersion).dll xitari_cs.i
 namespace {
+	// workaround taken from https://github.com/facebookresearch/ELF/blob/master/atari/atari_game.h
 	// work around bug in ALE.
 	// see Arcade-Learning-Environment/issues/86
-	std::mutex ALE_GLOBAL_LOCK;
+	std::mutex ale_global_lock;
 }
 
 
 XitariALE::XitariALE(const char* rom_file)
 {
-	std::lock_guard<std::mutex> lg(ALE_GLOBAL_LOCK);
+	std::lock_guard<std::mutex> lg(ale_global_lock);
 	_ale = new ale::ALEInterface(rom_file);
 
 

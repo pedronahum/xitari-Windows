@@ -16,6 +16,10 @@ namespace runXitari
             var ale = new Xitari.XitariALE("pong.bin");
             var totalActions = ale.ale_numLegalActions();
             var actions = ale.ale_legalActions((uint)totalActions);
+            // Get the observartion
+            var width = ale.ale_getScreenWidth();
+            var height = ale.ale_getScreenHeight();
+            Console.WriteLine("Width: {0} and Height: {1} of the screen ", width, height);
             //Check actions
             actions.ToList().ForEach(Console.WriteLine);
             //
@@ -26,6 +30,7 @@ namespace runXitari
                 var totalReward = 0.0;
                 while (!ale.ale_isGameOver())
                 {
+                    
                     var reward = ale.ale_act(actions[rnd.Next(actions.Count)]);
                     totalReward += reward;
                 }

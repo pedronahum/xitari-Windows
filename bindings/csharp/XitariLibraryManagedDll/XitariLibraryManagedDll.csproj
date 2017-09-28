@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XITARI</RootNamespace>
-    <AssemblyName>Xitari.Core.Managed-0.4d</AssemblyName>
+    <AssemblyName>Xitari.Core.Managed-0.4</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

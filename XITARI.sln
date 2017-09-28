@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XITARI Core", "XITARI Core", "{FC11D010-636E-4784-8290-A59FA076FAC8}"
 EndProject
@@ -28,28 +28,48 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp-examples", "CSharp-e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runXitari", "Examples\CSharp-examples\runXitari\runXitari.csproj", "{3FA1C989-37C4-4F22-A488-CB9143C46426}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CPlusPlus-examples", "CPlusPlus-examples", "{8BAF2E25-2981-4612-B8C0-3A2A5E6F9B0D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runXitariCpp", "Examples\CPlusPlus-examples\runXitariCpp\runXitariCpp.vcxproj", "{E74AE034-16E6-4036-94B3-6077115FD51E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Debug|x64.ActiveCfg = Debug|x64
 		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Debug|x64.Build.0 = Debug|x64
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Debug|x86.ActiveCfg = Debug|x64
 		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Release|x64.ActiveCfg = Release|x64
 		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Release|x64.Build.0 = Release|x64
+		{A30CC47A-6912-4C42-B42C-BD6F7BCAF4CC}.Release|x86.ActiveCfg = Release|x64
 		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Debug|x64.ActiveCfg = Debug|x64
 		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Debug|x64.Build.0 = Debug|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Debug|x86.ActiveCfg = Debug|x64
 		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Release|x64.ActiveCfg = Release|x64
 		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Release|x64.Build.0 = Release|x64
+		{BFBC5E34-4705-4D87-8BA0-C1A49D7E1C1F}.Release|x86.ActiveCfg = Release|x64
 		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Debug|x64.ActiveCfg = Debug|x64
 		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Debug|x64.Build.0 = Debug|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Debug|x86.ActiveCfg = Debug|x64
 		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Release|x64.ActiveCfg = Release|x64
 		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Release|x64.Build.0 = Release|x64
+		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57}.Release|x86.ActiveCfg = Release|x64
 		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Debug|x64.ActiveCfg = Debug|x64
 		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Debug|x64.Build.0 = Debug|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Debug|x86.ActiveCfg = Debug|x64
 		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Release|x64.ActiveCfg = Release|x64
 		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Release|x64.Build.0 = Release|x64
+		{3FA1C989-37C4-4F22-A488-CB9143C46426}.Release|x86.ActiveCfg = Release|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Debug|x64.ActiveCfg = Debug|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Debug|x64.Build.0 = Debug|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Debug|x86.ActiveCfg = Debug|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Release|x64.ActiveCfg = Release|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Release|x64.Build.0 = Release|x64
+		{E74AE034-16E6-4036-94B3-6077115FD51E}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +81,8 @@ Global
 		{9FDE42C1-E30F-430B-BDCA-4E8C58F3AA57} = {21CA9BBA-67D2-436C-BA30-E7BD70880B52}
 		{0BB4CDC4-A342-488D-9EC3-163F3357E577} = {788B2238-D15A-4D22-AF1C-9371946E5D87}
 		{3FA1C989-37C4-4F22-A488-CB9143C46426} = {0BB4CDC4-A342-488D-9EC3-163F3357E577}
+		{8BAF2E25-2981-4612-B8C0-3A2A5E6F9B0D} = {788B2238-D15A-4D22-AF1C-9371946E5D87}
+		{E74AE034-16E6-4036-94B3-6077115FD51E} = {8BAF2E25-2981-4612-B8C0-3A2A5E6F9B0D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3EF6771-C340-490E-A797-96F3F9190CC1}
