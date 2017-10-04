@@ -1,0 +1,3 @@
+
+SolutionDir = C:/repos/xitari-vs2017/
+PKG_CXXFLAGS = -I$(SolutionDir)Source -I$(SolutionDir)Source/agents -I$(SolutionDir)Source/common -I$(SolutionDir)Source/controllers -I$(SolutionDir)Source/emucore -I$(SolutionDir)Source/environment -I$(SolutionDir)Source/games -I$(SolutionDir)Source/os_dependent -I$(SolutionDir)Source/zlib 

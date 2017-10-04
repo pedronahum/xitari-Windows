@@ -1,0 +1,3 @@
+useDynLib(RcppXitari)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)

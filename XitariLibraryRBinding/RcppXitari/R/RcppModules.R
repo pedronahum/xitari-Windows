@@ -1,0 +1,1 @@
+loadModule("my_module", TRUE)
