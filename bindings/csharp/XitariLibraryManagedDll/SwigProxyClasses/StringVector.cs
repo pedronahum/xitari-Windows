@@ -10,23 +10,22 @@
 
 namespace Xitari {
 
-public class BoolVector : global::System.IDisposable, global::System.Collections.IEnumerable
-    , global::System.Collections.Generic.IList<bool>
+public class StringVector : global::System.IDisposable, global::System.Collections.IEnumerable
+    , global::System.Collections.Generic.IEnumerable<string>
  {
-
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal BoolVector(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal StringVector(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(BoolVector obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(StringVector obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~BoolVector() {
+  ~StringVector() {
     Dispose();
   }
 
@@ -35,7 +34,7 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          XitariLibPINVOKE.delete_BoolVector(swigCPtr);
+          XitariLibPINVOKE.delete_StringVector(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -43,10 +42,10 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
     }
   }
 
-  public BoolVector(global::System.Collections.ICollection c) : this() {
+  public StringVector(global::System.Collections.ICollection c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (bool element in c) {
+    foreach (string element in c) {
       this.Add(element);
     }
   }
@@ -63,7 +62,7 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
     }
   }
 
-  public bool this[int index]  {
+  public string this[int index]  {
     get {
       return getitem(index);
     }
@@ -95,17 +94,17 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
     }
   }
 
-  public void CopyTo(bool[] array)
+  public void CopyTo(string[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(bool[] array, int arrayIndex)
+  public void CopyTo(string[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, bool[] array, int arrayIndex, int count)
+  public void CopyTo(int index, string[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -123,16 +122,16 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  global::System.Collections.Generic.IEnumerator<bool> global::System.Collections.Generic.IEnumerable<bool>.GetEnumerator() {
-    return new BoolVectorEnumerator(this);
+  global::System.Collections.Generic.IEnumerator<string> global::System.Collections.Generic.IEnumerable<string>.GetEnumerator() {
+    return new StringVectorEnumerator(this);
   }
 
   global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new BoolVectorEnumerator(this);
+    return new StringVectorEnumerator(this);
   }
 
-  public BoolVectorEnumerator GetEnumerator() {
-    return new BoolVectorEnumerator(this);
+  public StringVectorEnumerator GetEnumerator() {
+    return new StringVectorEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -140,15 +139,15 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class BoolVectorEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<bool>
+  public sealed class StringVectorEnumerator : global::System.Collections.IEnumerator
+    , global::System.Collections.Generic.IEnumerator<string>
   {
-    private BoolVector collectionRef;
+    private StringVector collectionRef;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public BoolVectorEnumerator(BoolVector collection) {
+    public StringVectorEnumerator(StringVector collection) {
       collectionRef = collection;
       currentIndex = -1;
       currentObject = null;
@@ -156,7 +155,7 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
     }
 
     // Type-safe iterator Current
-    public bool Current {
+    public string Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -164,7 +163,7 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (bool)currentObject;
+        return (string)currentObject;
       }
     }
 
@@ -202,126 +201,107 @@ public class BoolVector : global::System.IDisposable, global::System.Collections
   }
 
   public void Clear() {
-    XitariLibPINVOKE.BoolVector_Clear(swigCPtr);
+    XitariLibPINVOKE.StringVector_Clear(swigCPtr);
   }
 
-  public void Add(bool x) {
-    XitariLibPINVOKE.BoolVector_Add(swigCPtr, x);
+  public void Add(string x) {
+    XitariLibPINVOKE.StringVector_Add(swigCPtr, x);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = XitariLibPINVOKE.BoolVector_size(swigCPtr);
+    uint ret = XitariLibPINVOKE.StringVector_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = XitariLibPINVOKE.BoolVector_capacity(swigCPtr);
+    uint ret = XitariLibPINVOKE.StringVector_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    XitariLibPINVOKE.BoolVector_reserve(swigCPtr, n);
+    XitariLibPINVOKE.StringVector_reserve(swigCPtr, n);
   }
 
-  public BoolVector() : this(XitariLibPINVOKE.new_BoolVector__SWIG_0(), true) {
+  public StringVector() : this(XitariLibPINVOKE.new_StringVector__SWIG_0(), true) {
   }
 
-  public BoolVector(BoolVector other) : this(XitariLibPINVOKE.new_BoolVector__SWIG_1(BoolVector.getCPtr(other)), true) {
+  public StringVector(StringVector other) : this(XitariLibPINVOKE.new_StringVector__SWIG_1(StringVector.getCPtr(other)), true) {
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public BoolVector(int capacity) : this(XitariLibPINVOKE.new_BoolVector__SWIG_2(capacity), true) {
+  public StringVector(int capacity) : this(XitariLibPINVOKE.new_StringVector__SWIG_2(capacity), true) {
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private bool getitemcopy(int index) {
-    bool ret = XitariLibPINVOKE.BoolVector_getitemcopy(swigCPtr, index);
-    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  private bool getitem(int index) {
-    bool ret = XitariLibPINVOKE.BoolVector_getitem(swigCPtr, index);
+  private string getitemcopy(int index) {
+    string ret = XitariLibPINVOKE.StringVector_getitemcopy(swigCPtr, index);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, bool val) {
-    XitariLibPINVOKE.BoolVector_setitem(swigCPtr, index, val);
-    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void AddRange(BoolVector values) {
-    XitariLibPINVOKE.BoolVector_AddRange(swigCPtr, BoolVector.getCPtr(values));
-    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public BoolVector GetRange(int index, int count) {
-    global::System.IntPtr cPtr = XitariLibPINVOKE.BoolVector_GetRange(swigCPtr, index, count);
-    BoolVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new BoolVector(cPtr, true);
+  private string getitem(int index) {
+    string ret = XitariLibPINVOKE.StringVector_getitem(swigCPtr, index);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void Insert(int index, bool x) {
-    XitariLibPINVOKE.BoolVector_Insert(swigCPtr, index, x);
+  private void setitem(int index, string val) {
+    XitariLibPINVOKE.StringVector_setitem(swigCPtr, index, val);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void InsertRange(int index, BoolVector values) {
-    XitariLibPINVOKE.BoolVector_InsertRange(swigCPtr, index, BoolVector.getCPtr(values));
+  public void AddRange(StringVector values) {
+    XitariLibPINVOKE.StringVector_AddRange(swigCPtr, StringVector.getCPtr(values));
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public StringVector GetRange(int index, int count) {
+    global::System.IntPtr cPtr = XitariLibPINVOKE.StringVector_GetRange(swigCPtr, index, count);
+    StringVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new StringVector(cPtr, true);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void Insert(int index, string x) {
+    XitariLibPINVOKE.StringVector_Insert(swigCPtr, index, x);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InsertRange(int index, StringVector values) {
+    XitariLibPINVOKE.StringVector_InsertRange(swigCPtr, index, StringVector.getCPtr(values));
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    XitariLibPINVOKE.BoolVector_RemoveAt(swigCPtr, index);
+    XitariLibPINVOKE.StringVector_RemoveAt(swigCPtr, index);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    XitariLibPINVOKE.BoolVector_RemoveRange(swigCPtr, index, count);
+    XitariLibPINVOKE.StringVector_RemoveRange(swigCPtr, index, count);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static BoolVector Repeat(bool value, int count) {
-    global::System.IntPtr cPtr = XitariLibPINVOKE.BoolVector_Repeat(value, count);
-    BoolVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new BoolVector(cPtr, true);
+  public static StringVector Repeat(string value, int count) {
+    global::System.IntPtr cPtr = XitariLibPINVOKE.StringVector_Repeat(value, count);
+    StringVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new StringVector(cPtr, true);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    XitariLibPINVOKE.BoolVector_Reverse__SWIG_0(swigCPtr);
+    XitariLibPINVOKE.StringVector_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    XitariLibPINVOKE.BoolVector_Reverse__SWIG_1(swigCPtr, index, count);
+    XitariLibPINVOKE.StringVector_Reverse__SWIG_1(swigCPtr, index, count);
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetRange(int index, BoolVector values) {
-    XitariLibPINVOKE.BoolVector_SetRange(swigCPtr, index, BoolVector.getCPtr(values));
+  public void SetRange(int index, StringVector values) {
+    XitariLibPINVOKE.StringVector_SetRange(swigCPtr, index, StringVector.getCPtr(values));
     if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public bool Contains(bool value) {
-    bool ret = XitariLibPINVOKE.BoolVector_Contains(swigCPtr, value);
-    return ret;
-  }
-
-  public int IndexOf(bool value) {
-    int ret = XitariLibPINVOKE.BoolVector_IndexOf(swigCPtr, value);
-    return ret;
-  }
-
-  public int LastIndexOf(bool value) {
-    int ret = XitariLibPINVOKE.BoolVector_LastIndexOf(swigCPtr, value);
-    return ret;
-  }
-
-  public bool Remove(bool value) {
-    bool ret = XitariLibPINVOKE.BoolVector_Remove(swigCPtr, value);
-    return ret;
   }
 
 }

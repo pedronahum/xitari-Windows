@@ -581,7 +581,7 @@ const ALEScreen &ALEScreen::operator=(const ALEScreen &rhs) {
     }
 
     // Copy data over
-    std::copy(rhs.getArray().begin(), rhs.getArray().end(), m_pixels.begin());
+    std::copy(rhs.getArray2().begin(), rhs.getArray2().end(), m_pixels.begin());
 
     return *this;
 }

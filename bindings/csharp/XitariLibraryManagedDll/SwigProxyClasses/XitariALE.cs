@@ -43,8 +43,9 @@ public class XitariALE : global::System.IDisposable {
   public XitariALE(string rom_file) : this(XitariLibPINVOKE.new_XitariALE(rom_file), true) {
   }
 
-  public static void ale_fillRgbFromPalette(SWIGTYPE_p_unsigned_char rgb, SWIGTYPE_p_unsigned_char obs, uint rgb_size, uint obs_size) {
-    XitariLibPINVOKE.XitariALE_ale_fillRgbFromPalette(SWIGTYPE_p_unsigned_char.getCPtr(rgb), SWIGTYPE_p_unsigned_char.getCPtr(obs), rgb_size, obs_size);
+  public void ale_fillRgbFromPalette(UCharVector rgb, UCharVector obs, uint rgb_size, uint obs_size) {
+    XitariLibPINVOKE.XitariALE_ale_fillRgbFromPalette(swigCPtr, UCharVector.getCPtr(rgb), UCharVector.getCPtr(obs), rgb_size, obs_size);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ale_gc() {
@@ -84,12 +85,25 @@ public class XitariALE : global::System.IDisposable {
     return ret;
   }
 
-  public void ale_fillObs(SWIGTYPE_p_unsigned_char obs, uint obs_size) {
-    XitariLibPINVOKE.XitariALE_ale_fillObs(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(obs), obs_size);
+  public void ale_getScreenRGB(UCharVector rgb) {
+    XitariLibPINVOKE.XitariALE_ale_getScreenRGB(swigCPtr, UCharVector.getCPtr(rgb));
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void ale_fillRamObs(SWIGTYPE_p_unsigned_char ram, uint ram_size) {
-    XitariLibPINVOKE.XitariALE_ale_fillRamObs(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(ram), ram_size);
+  public UCharVector ale_getRescaledYChannelScreen() {
+    UCharVector ret = new UCharVector(XitariLibPINVOKE.XitariALE_ale_getRescaledYChannelScreen(swigCPtr), true);
+    return ret;
+  }
+
+  public void ale_fillRgb2yFromPalette(UCharVector y, UCharVector obs, uint y_size, uint obs_size) {
+    XitariLibPINVOKE.XitariALE_ale_fillRgb2yFromPalette(swigCPtr, UCharVector.getCPtr(y), UCharVector.getCPtr(obs), y_size, obs_size);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public UCharVector ale_resizeBilinearGray(UCharVector y, int w, int h, int w2, int h2) {
+    UCharVector ret = new UCharVector(XitariLibPINVOKE.XitariALE_ale_resizeBilinearGray(swigCPtr, UCharVector.getCPtr(y), w, h, w2, h2), true);
+    if (XitariLibPINVOKE.SWIGPendingException.Pending) throw XitariLibPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public int ale_numLegalActions() {
@@ -110,14 +124,6 @@ public class XitariALE : global::System.IDisposable {
   public int ale_getSnapshotLength() {
     int ret = XitariLibPINVOKE.XitariALE_ale_getSnapshotLength(swigCPtr);
     return ret;
-  }
-
-  public void ale_saveSnapshot(SWIGTYPE_p_unsigned_char data, uint length) {
-    XitariLibPINVOKE.XitariALE_ale_saveSnapshot(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(data), length);
-  }
-
-  public void ale_restoreSnapshot(SWIGTYPE_p_unsigned_char snapshot, uint size) {
-    XitariLibPINVOKE.XitariALE_ale_restoreSnapshot(swigCPtr, SWIGTYPE_p_unsigned_char.getCPtr(snapshot), size);
   }
 
 }

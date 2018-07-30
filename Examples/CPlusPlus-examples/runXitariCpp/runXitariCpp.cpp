@@ -8,10 +8,11 @@
 
 int main()
 {
-	auto ale = new ale::ALEInterface("pong.bin");
+	//auto ale = new XitariALE("ms_pacman.bin");
+	auto ale = new ale::ALEInterface("ms_pacman.bin");
+
+	const auto legal_actions = ale->getLegalActionSet();
 	
-	
-	auto legal_actions = ale->getMinimalActionSet();
 
 	// Play 100 episodes
 	for (auto episode = 0; episode<100; episode++) {

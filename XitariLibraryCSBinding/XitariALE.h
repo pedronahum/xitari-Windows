@@ -8,13 +8,14 @@ typedef unsigned char uint8_t;
 class XitariALE
 {
 private:
-	ale::ALEInterface* _ale;
+	//ale::ALEInterface* _ale;
+	std::unique_ptr<ale::ALEInterface> _ale;
 public:
 	XitariALE(const char *rom_file);
 
 	// Converts the palette values to RGB.
 	// The shape of the rgb array should be 3 x obs.shape.
-	static void ale_fillRgbFromPalette(uint8_t *rgb, const uint8_t *obs,
+	void ale_fillRgbFromPalette(std::vector<unsigned char> & rgb, std::vector<unsigned char> & obs,
 		size_t rgb_size, size_t obs_size);
 
 	// Initializes the ALE.
@@ -52,11 +53,20 @@ public:
 	//
 	// Currently, the palette values are even numbers from 0 to 255.
 	// So there are only 128 distinct values.
-	void ale_fillObs(uint8_t *obs, size_t obs_size) const;
+	// void ale_fillObs(std::vector<unsigned char> &obs, size_t obs_size) const;
 
 	// Fills the given array with the content of the RAM.
 	// The obs_size should be 128.
-	void ale_fillRamObs(uint8_t *ram, size_t ram_size) const;
+	// void ale_fillRamObs(std::vector<unsigned char> & ram, size_t ram_size) const;
+
+	void ale_getScreenRGB(std::vector<unsigned char> & rgb);
+
+
+	std::vector<unsigned char> ale_getRescaledYChannelScreen();
+
+	void ale_fillRgb2yFromPalette(std::vector<unsigned char> & y, std::vector<unsigned char> & obs, size_t y_size, size_t obs_size);
+
+	std::vector<unsigned char> ale_resizeBilinearGray(std::vector<unsigned char> & y, const int w, const int h, const int w2, const int h2);
 
 	// Returns the number of legal actions
 	int ale_numLegalActions();
@@ -71,11 +81,11 @@ public:
 	int ale_getSnapshotLength() const;
 
 	// Save the current state into a snapshot
-	void ale_saveSnapshot(uint8_t *data, size_t length) const;
+	// void ale_saveSnapshot(std::vector<unsigned char> & data, size_t length) const;
 
 	// Load a particular snapshot into the emulator
-	void ale_restoreSnapshot(const uint8_t *snapshot,
-		size_t size);
+	//void ale_restoreSnapshot(const std::vector<unsigned char> &snapshot,
+	//	size_t size);
 
 
 };

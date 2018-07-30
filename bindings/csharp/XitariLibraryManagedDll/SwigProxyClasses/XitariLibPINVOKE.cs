@@ -598,11 +598,155 @@ class XitariLibPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_delete_BoolVector")]
   public static extern void delete_BoolVector(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Clear")]
+  public static extern void StringVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Add")]
+  public static extern void StringVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_size")]
+  public static extern uint StringVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_capacity")]
+  public static extern uint StringVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_reserve")]
+  public static extern void StringVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_StringVector__SWIG_0")]
+  public static extern global::System.IntPtr new_StringVector__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_StringVector__SWIG_1")]
+  public static extern global::System.IntPtr new_StringVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_StringVector__SWIG_2")]
+  public static extern global::System.IntPtr new_StringVector__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_getitemcopy")]
+  public static extern string StringVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_getitem")]
+  public static extern string StringVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_setitem")]
+  public static extern void StringVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_AddRange")]
+  public static extern void StringVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_GetRange")]
+  public static extern global::System.IntPtr StringVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Insert")]
+  public static extern void StringVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_InsertRange")]
+  public static extern void StringVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_RemoveAt")]
+  public static extern void StringVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_RemoveRange")]
+  public static extern void StringVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Repeat")]
+  public static extern global::System.IntPtr StringVector_Repeat([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Reverse__SWIG_0")]
+  public static extern void StringVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_Reverse__SWIG_1")]
+  public static extern void StringVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_StringVector_SetRange")]
+  public static extern void StringVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_delete_StringVector")]
+  public static extern void delete_StringVector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Clear")]
+  public static extern void UCharVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Add")]
+  public static extern void UCharVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_size")]
+  public static extern uint UCharVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_capacity")]
+  public static extern uint UCharVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_reserve")]
+  public static extern void UCharVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_UCharVector__SWIG_0")]
+  public static extern global::System.IntPtr new_UCharVector__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_UCharVector__SWIG_1")]
+  public static extern global::System.IntPtr new_UCharVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_UCharVector__SWIG_2")]
+  public static extern global::System.IntPtr new_UCharVector__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_getitemcopy")]
+  public static extern byte UCharVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_getitem")]
+  public static extern byte UCharVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_setitem")]
+  public static extern void UCharVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, byte jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_AddRange")]
+  public static extern void UCharVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_GetRange")]
+  public static extern global::System.IntPtr UCharVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Insert")]
+  public static extern void UCharVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, byte jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_InsertRange")]
+  public static extern void UCharVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_RemoveAt")]
+  public static extern void UCharVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_RemoveRange")]
+  public static extern void UCharVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Repeat")]
+  public static extern global::System.IntPtr UCharVector_Repeat(byte jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Reverse__SWIG_0")]
+  public static extern void UCharVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Reverse__SWIG_1")]
+  public static extern void UCharVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_SetRange")]
+  public static extern void UCharVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Contains")]
+  public static extern bool UCharVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_IndexOf")]
+  public static extern int UCharVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_LastIndexOf")]
+  public static extern int UCharVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_UCharVector_Remove")]
+  public static extern bool UCharVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_delete_UCharVector")]
+  public static extern void delete_UCharVector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_new_XitariALE")]
   public static extern global::System.IntPtr new_XitariALE(string jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_fillRgbFromPalette")]
-  public static extern void XitariALE_ale_fillRgbFromPalette(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3, uint jarg4);
+  public static extern void XitariALE_ale_fillRgbFromPalette(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, uint jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_gc")]
   public static extern void XitariALE_ale_gc(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -628,11 +772,17 @@ class XitariLibPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_loadState")]
   public static extern bool XitariALE_ale_loadState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_fillObs")]
-  public static extern void XitariALE_ale_fillObs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_getScreenRGB")]
+  public static extern void XitariALE_ale_getScreenRGB(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_fillRamObs")]
-  public static extern void XitariALE_ale_fillRamObs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_getRescaledYChannelScreen")]
+  public static extern global::System.IntPtr XitariALE_ale_getRescaledYChannelScreen(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_fillRgb2yFromPalette")]
+  public static extern void XitariALE_ale_fillRgb2yFromPalette(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, uint jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_resizeBilinearGray")]
+  public static extern global::System.IntPtr XitariALE_ale_resizeBilinearGray(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_numLegalActions")]
   public static extern int XitariALE_ale_numLegalActions(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -645,12 +795,6 @@ class XitariLibPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_getSnapshotLength")]
   public static extern int XitariALE_ale_getSnapshotLength(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_saveSnapshot")]
-  public static extern void XitariALE_ale_saveSnapshot(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_XitariALE_ale_restoreSnapshot")]
-  public static extern void XitariALE_ale_restoreSnapshot(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("Xitari.Core.CSBinding-0.4.dll", EntryPoint="CSharp_Xitari_delete_XitariALE")]
   public static extern void delete_XitariALE(global::System.Runtime.InteropServices.HandleRef jarg1);

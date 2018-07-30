@@ -13,13 +13,15 @@ namespace runXitari
             Console.WriteLine("======== Testing ALE in C# ========");
             var rnd = new Random();
             var sw = new Stopwatch();
-            var ale = new Xitari.XitariALE("pong.bin");
+            var ale = new Xitari.XitariALE("ms_pacman.bin");
             var totalActions = ale.ale_numLegalActions();
             var actions = ale.ale_legalActions((uint)totalActions);
             // Get the observartion
             var width = ale.ale_getScreenWidth();
             var height = ale.ale_getScreenHeight();
             Console.WriteLine("Width: {0} and Height: {1} of the screen ", width, height);
+            var screen = ale.ale_getRescaledYChannelScreen();
+            Console.WriteLine("Screen Size {0}: ", screen.Count);
             //Check actions
             actions.ToList().ForEach(Console.WriteLine);
             //
@@ -32,6 +34,8 @@ namespace runXitari
                 {
                     
                     var reward = ale.ale_act(actions[rnd.Next(actions.Count)]);
+                    //Console.WriteLine(reward);
+                    
                     totalReward += reward;
                 }
                 // cout << "Episode " << episode << " ended with score: " << totalReward << endl;

@@ -3,7 +3,7 @@
 
 
 %include <stl.i>
-%include <std_wstring.i>
+%include <typemaps.i>
 %include <std_vector.i>
 %include <std_map.i>
 %include <std_pair.i>
@@ -11,6 +11,8 @@
 %include <windows.i>
 %include <attribute.i>
 #include <exception.i>
+%include <std_wstring.i>
+
 
 #ifdef SWIGCSHARP
 %include <arrays_csharp.i>
@@ -64,6 +66,11 @@ SWIG_STD_VECTOR_ENHANCED(size_t)
 %template(DoubleVector) std::vector<double>;
 %template(FloatVector) std::vector<float>;
 %template(BoolVector) std::vector<bool>;
+
+#ifdef SWIGCSHARP
+%template(StringVector) std::vector<std::wstring>;
+%template(UCharVector) std::vector<unsigned char>;
+#endif
 
 // ignore items not needed.
 #define IGNORE_FUNCTION %rename("$ignore", %$isfunction, fullname=1)

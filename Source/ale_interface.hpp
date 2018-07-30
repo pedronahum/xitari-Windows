@@ -122,7 +122,8 @@ class ALEScreen {
         pixel_t& pixel(int r, int c) { return m_pixels[index(r, c)]; }
     
         /** Access the whole array */
-        const std::vector<pixel_t>& getArray() const { return m_pixels; }
+		pixel_t *getArray() const { return const_cast<pixel_t *>(&m_pixels[0]); }
+		const std::vector<pixel_t>& getArray2() const { return m_pixels; }
         std::vector<pixel_t>& getArray() { return m_pixels; }
 
         /** Dimensionality information */
@@ -136,7 +137,7 @@ class ALEScreen {
         // note that we use short circuit evaluation
         bool equals(const ALEScreen &rhs) const 
             { return width() == rhs.width() && height() == rhs.height() 
-                && m_pixels == rhs.getArray(); }
+                && m_pixels == rhs.getArray2(); }
 
   private:
         size_t index(int r,int c) const 

@@ -449,10 +449,10 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 #include <utility>
 
 
-#include <string>
-
-
 #include <stdio.h>
+
+
+#include <string>
 
 SWIGINTERN std::vector< int > *new_std_vector_Sl_int_Sg___SWIG_2(int capacity){
         std::vector< int >* pv = 0;
@@ -1038,6 +1038,213 @@ SWIGINTERN int std_vector_Sl_bool_Sg__LastIndexOf(std::vector< bool > *self,bool
       }
 SWIGINTERN bool std_vector_Sl_bool_Sg__Remove(std::vector< bool > *self,bool const &value){
         std::vector< bool >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end()) {
+          self->erase(it);
+	  return true;
+        }
+        return false;
+      }
+SWIGINTERN std::vector< std::wstring > *new_std_vector_Sl_std_wstring_Sg___SWIG_2(int capacity){
+        std::vector< std::wstring >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< std::wstring >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN std::wstring std_vector_Sl_std_wstring_Sg__getitemcopy(std::vector< std::wstring > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::wstring const &std_vector_Sl_std_wstring_Sg__getitem(std::vector< std::wstring > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__setitem(std::vector< std::wstring > *self,int index,std::wstring const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__AddRange(std::vector< std::wstring > *self,std::vector< std::wstring > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< std::wstring > *std_vector_Sl_std_wstring_Sg__GetRange(std::vector< std::wstring > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< std::wstring >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__Insert(std::vector< std::wstring > *self,int index,std::wstring const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__InsertRange(std::vector< std::wstring > *self,int index,std::vector< std::wstring > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__RemoveAt(std::vector< std::wstring > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__RemoveRange(std::vector< std::wstring > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< std::wstring > *std_vector_Sl_std_wstring_Sg__Repeat(std::wstring const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< std::wstring >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__Reverse__SWIG_0(std::vector< std::wstring > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__Reverse__SWIG_1(std::vector< std::wstring > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_std_wstring_Sg__SetRange(std::vector< std::wstring > *self,int index,std::vector< std::wstring > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN std::vector< unsigned char > *new_std_vector_Sl_unsigned_SS_char_Sg___SWIG_2(int capacity){
+        std::vector< unsigned char >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< unsigned char >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN unsigned char std_vector_Sl_unsigned_SS_char_Sg__getitemcopy(std::vector< unsigned char > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN unsigned char const &std_vector_Sl_unsigned_SS_char_Sg__getitem(std::vector< unsigned char > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__setitem(std::vector< unsigned char > *self,int index,unsigned char const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__AddRange(std::vector< unsigned char > *self,std::vector< unsigned char > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< unsigned char > *std_vector_Sl_unsigned_SS_char_Sg__GetRange(std::vector< unsigned char > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< unsigned char >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__Insert(std::vector< unsigned char > *self,int index,unsigned char const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__InsertRange(std::vector< unsigned char > *self,int index,std::vector< unsigned char > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__RemoveAt(std::vector< unsigned char > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__RemoveRange(std::vector< unsigned char > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< unsigned char > *std_vector_Sl_unsigned_SS_char_Sg__Repeat(unsigned char const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< unsigned char >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__Reverse__SWIG_0(std::vector< unsigned char > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__Reverse__SWIG_1(std::vector< unsigned char > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg__SetRange(std::vector< unsigned char > *self,int index,std::vector< unsigned char > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN bool std_vector_Sl_unsigned_SS_char_Sg__Contains(std::vector< unsigned char > *self,unsigned char const &value){
+        return std::find(self->begin(), self->end(), value) != self->end();
+      }
+SWIGINTERN int std_vector_Sl_unsigned_SS_char_Sg__IndexOf(std::vector< unsigned char > *self,unsigned char const &value){
+        int index = -1;
+        std::vector< unsigned char >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end())
+          index = (int)(it - self->begin());
+        return index;
+      }
+SWIGINTERN int std_vector_Sl_unsigned_SS_char_Sg__LastIndexOf(std::vector< unsigned char > *self,unsigned char const &value){
+        int index = -1;
+        std::vector< unsigned char >::reverse_iterator rit = std::find(self->rbegin(), self->rend(), value);
+        if (rit != self->rend())
+          index = (int)(self->rend() - 1 - rit);
+        return index;
+      }
+SWIGINTERN bool std_vector_Sl_unsigned_SS_char_Sg__Remove(std::vector< unsigned char > *self,unsigned char const &value){
+        std::vector< unsigned char >::iterator it = std::find(self->begin(), self->end(), value);
         if (it != self->end()) {
           self->erase(it);
 	  return true;
@@ -3320,6 +3527,826 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_delete_BoolVector(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_Clear(void * jarg1) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_Add(void * jarg1, wchar_t * jarg2) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  std::wstring *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg2_str(jarg2);
+  arg2 = &arg2_str; 
+  (arg1)->push_back((std::wstring const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_StringVector_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  std::vector< std::wstring >::size_type result;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  result = ((std::vector< std::wstring > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_StringVector_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  std::vector< std::wstring >::size_type result;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  result = ((std::vector< std::wstring > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  std::vector< std::wstring >::size_type arg2 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (std::vector< std::wstring >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_StringVector__SWIG_0() {
+  void * jresult ;
+  std::vector< std::wstring > *result = 0 ;
+  
+  result = (std::vector< std::wstring > *)new std::vector< std::wstring >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_StringVector__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< std::wstring > *arg1 = 0 ;
+  std::vector< std::wstring > *result = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::wstring > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< std::wstring > *)new std::vector< std::wstring >((std::vector< std::wstring > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_StringVector__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< std::wstring > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< std::wstring > *)new_std_vector_Sl_std_wstring_Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_StringVector_getitemcopy(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::wstring result;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_std_wstring_Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = SWIG_csharp_wstring_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_StringVector_getitem(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::wstring *result = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::wstring *) &std_vector_Sl_std_wstring_Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = SWIG_csharp_wstring_callback(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_setitem(void * jarg1, int jarg2, wchar_t * jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::wstring *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (!jarg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg3_str(jarg3);
+  arg3 = &arg3_str; 
+  try {
+    std_vector_Sl_std_wstring_Sg__setitem(arg1,arg2,(std::wstring const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_AddRange(void * jarg1, void * jarg2) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  std::vector< std::wstring > *arg2 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (std::vector< std::wstring > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::wstring > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_std_wstring_Sg__AddRange(arg1,(std::vector< std::wstring > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_StringVector_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< std::wstring > *result = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< std::wstring > *)std_vector_Sl_std_wstring_Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_Insert(void * jarg1, int jarg2, wchar_t * jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::wstring *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  if (!jarg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg3_str(jarg3);
+  arg3 = &arg3_str; 
+  try {
+    std_vector_Sl_std_wstring_Sg__Insert(arg1,arg2,(std::wstring const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::vector< std::wstring > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::wstring > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::wstring > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_wstring_Sg__InsertRange(arg1,arg2,(std::vector< std::wstring > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_std_wstring_Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_wstring_Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_StringVector_Repeat(wchar_t * jarg1, int jarg2) {
+  void * jresult ;
+  std::wstring *arg1 = 0 ;
+  int arg2 ;
+  std::vector< std::wstring > *result = 0 ;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return 0;
+  }
+  std::wstring arg1_str(jarg1);
+  arg1 = &arg1_str; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::wstring > *)std_vector_Sl_std_wstring_Sg__Repeat((std::wstring const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_Reverse__SWIG_0(void * jarg1) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  std_vector_Sl_std_wstring_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_std_wstring_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_StringVector_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  int arg2 ;
+  std::vector< std::wstring > *arg3 = 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< std::wstring > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::wstring > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_wstring_Sg__SetRange(arg1,arg2,(std::vector< std::wstring > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_delete_StringVector(void * jarg1) {
+  std::vector< std::wstring > *arg1 = (std::vector< std::wstring > *) 0 ;
+  
+  arg1 = (std::vector< std::wstring > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_Clear(void * jarg1) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_Add(void * jarg1, unsigned char jarg2) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  unsigned char *arg2 = 0 ;
+  unsigned char temp2 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  temp2 = (unsigned char)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->push_back((unsigned char const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_UCharVector_size(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< unsigned char >::size_type result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  result = ((std::vector< unsigned char > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Xitari_UCharVector_capacity(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< unsigned char >::size_type result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  result = ((std::vector< unsigned char > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_reserve(void * jarg1, unsigned long jarg2) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< unsigned char >::size_type arg2 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (std::vector< unsigned char >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_UCharVector__SWIG_0() {
+  void * jresult ;
+  std::vector< unsigned char > *result = 0 ;
+  
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_UCharVector__SWIG_1(void * jarg1) {
+  void * jresult ;
+  std::vector< unsigned char > *arg1 = 0 ;
+  std::vector< unsigned char > *result = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >((std::vector< unsigned char > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_UCharVector__SWIG_2(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< unsigned char > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< unsigned char > *)new_std_vector_Sl_unsigned_SS_char_Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned char SWIGSTDCALL CSharp_Xitari_UCharVector_getitemcopy(void * jarg1, int jarg2) {
+  unsigned char jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  unsigned char result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (unsigned char)std_vector_Sl_unsigned_SS_char_Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned char SWIGSTDCALL CSharp_Xitari_UCharVector_getitem(void * jarg1, int jarg2) {
+  unsigned char jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  unsigned char *result = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (unsigned char *) &std_vector_Sl_unsigned_SS_char_Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_setitem(void * jarg1, int jarg2, unsigned char jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  unsigned char *arg3 = 0 ;
+  unsigned char temp3 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (unsigned char)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__setitem(arg1,arg2,(unsigned char const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_AddRange(void * jarg1, void * jarg2) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  std::vector< unsigned char > *arg2 = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (std::vector< unsigned char > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_unsigned_SS_char_Sg__AddRange(arg1,(std::vector< unsigned char > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_UCharVector_GetRange(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< unsigned char > *result = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< unsigned char > *)std_vector_Sl_unsigned_SS_char_Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_Insert(void * jarg1, int jarg2, unsigned char jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  unsigned char *arg3 = 0 ;
+  unsigned char temp3 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (unsigned char)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__Insert(arg1,arg2,(unsigned char const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_InsertRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  std::vector< unsigned char > *arg3 = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< unsigned char > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__InsertRange(arg1,arg2,(std::vector< unsigned char > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_RemoveAt(void * jarg1, int jarg2) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_RemoveRange(void * jarg1, int jarg2, int jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_UCharVector_Repeat(unsigned char jarg1, int jarg2) {
+  void * jresult ;
+  unsigned char *arg1 = 0 ;
+  int arg2 ;
+  unsigned char temp1 ;
+  std::vector< unsigned char > *result = 0 ;
+  
+  temp1 = (unsigned char)jarg1; 
+  arg1 = &temp1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< unsigned char > *)std_vector_Sl_unsigned_SS_char_Sg__Repeat((unsigned char const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_Reverse__SWIG_0(void * jarg1) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  std_vector_Sl_unsigned_SS_char_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_Reverse__SWIG_1(void * jarg1, int jarg2, int jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_UCharVector_SetRange(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  int arg2 ;
+  std::vector< unsigned char > *arg3 = 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< unsigned char > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_unsigned_SS_char_Sg__SetRange(arg1,arg2,(std::vector< unsigned char > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_UCharVector_Contains(void * jarg1, unsigned char jarg2) {
+  unsigned int jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  unsigned char *arg2 = 0 ;
+  unsigned char temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  temp2 = (unsigned char)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_unsigned_SS_char_Sg__Contains(arg1,(unsigned char const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_UCharVector_IndexOf(void * jarg1, unsigned char jarg2) {
+  int jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  unsigned char *arg2 = 0 ;
+  unsigned char temp2 ;
+  int result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  temp2 = (unsigned char)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_unsigned_SS_char_Sg__IndexOf(arg1,(unsigned char const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_UCharVector_LastIndexOf(void * jarg1, unsigned char jarg2) {
+  int jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  unsigned char *arg2 = 0 ;
+  unsigned char temp2 ;
+  int result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  temp2 = (unsigned char)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_unsigned_SS_char_Sg__LastIndexOf(arg1,(unsigned char const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_UCharVector_Remove(void * jarg1, unsigned char jarg2) {
+  unsigned int jresult ;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  unsigned char *arg2 = 0 ;
+  unsigned char temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  temp2 = (unsigned char)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_unsigned_SS_char_Sg__Remove(arg1,(unsigned char const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_delete_UCharVector(void * jarg1) {
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  
+  arg1 = (std::vector< unsigned char > *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_XitariALE(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
@@ -3332,17 +4359,27 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_new_XitariALE(char * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_fillRgbFromPalette(void * jarg1, void * jarg2, unsigned long jarg3, unsigned long jarg4) {
-  uint8_t *arg1 = (uint8_t *) 0 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
-  size_t arg3 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_fillRgbFromPalette(void * jarg1, void * jarg2, void * jarg3, unsigned long jarg4, unsigned long jarg5) {
+  XitariALE *arg1 = (XitariALE *) 0 ;
+  std::vector< unsigned char > *arg2 = 0 ;
+  std::vector< unsigned char > *arg3 = 0 ;
   size_t arg4 ;
+  size_t arg5 ;
   
-  arg1 = (uint8_t *)jarg1; 
-  arg2 = (uint8_t *)jarg2; 
-  arg3 = (size_t)jarg3; 
+  arg1 = (XitariALE *)jarg1; 
+  arg2 = (std::vector< unsigned char > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return ;
+  } 
+  arg3 = (std::vector< unsigned char > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return ;
+  } 
   arg4 = (size_t)jarg4; 
-  XitariALE::ale_fillRgbFromPalette(arg1,(unsigned char const *)arg2,arg3,arg4);
+  arg5 = (size_t)jarg5; 
+  (arg1)->ale_fillRgbFromPalette(*arg2,*arg3,arg4,arg5);
 }
 
 
@@ -3432,27 +4469,79 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Xitari_XitariALE_ale_loadState(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_fillObs(void * jarg1, void * jarg2, unsigned long jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_getScreenRGB(void * jarg1, void * jarg2) {
   XitariALE *arg1 = (XitariALE *) 0 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
-  size_t arg3 ;
+  std::vector< unsigned char > *arg2 = 0 ;
   
   arg1 = (XitariALE *)jarg1; 
-  arg2 = (uint8_t *)jarg2; 
-  arg3 = (size_t)jarg3; 
-  ((XitariALE const *)arg1)->ale_fillObs(arg2,arg3);
+  arg2 = (std::vector< unsigned char > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return ;
+  } 
+  (arg1)->ale_getScreenRGB(*arg2);
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_fillRamObs(void * jarg1, void * jarg2, unsigned long jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_XitariALE_ale_getRescaledYChannelScreen(void * jarg1) {
+  void * jresult ;
   XitariALE *arg1 = (XitariALE *) 0 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
-  size_t arg3 ;
+  std::vector< unsigned char > result;
   
   arg1 = (XitariALE *)jarg1; 
-  arg2 = (uint8_t *)jarg2; 
-  arg3 = (size_t)jarg3; 
-  ((XitariALE const *)arg1)->ale_fillRamObs(arg2,arg3);
+  result = (arg1)->ale_getRescaledYChannelScreen();
+  jresult = new std::vector< unsigned char >((const std::vector< unsigned char > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_fillRgb2yFromPalette(void * jarg1, void * jarg2, void * jarg3, unsigned long jarg4, unsigned long jarg5) {
+  XitariALE *arg1 = (XitariALE *) 0 ;
+  std::vector< unsigned char > *arg2 = 0 ;
+  std::vector< unsigned char > *arg3 = 0 ;
+  size_t arg4 ;
+  size_t arg5 ;
+  
+  arg1 = (XitariALE *)jarg1; 
+  arg2 = (std::vector< unsigned char > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return ;
+  } 
+  arg3 = (std::vector< unsigned char > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return ;
+  } 
+  arg4 = (size_t)jarg4; 
+  arg5 = (size_t)jarg5; 
+  (arg1)->ale_fillRgb2yFromPalette(*arg2,*arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Xitari_XitariALE_ale_resizeBilinearGray(void * jarg1, void * jarg2, int jarg3, int jarg4, int jarg5, int jarg6) {
+  void * jresult ;
+  XitariALE *arg1 = (XitariALE *) 0 ;
+  std::vector< unsigned char > *arg2 = 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  std::vector< unsigned char > result;
+  
+  arg1 = (XitariALE *)jarg1; 
+  arg2 = (std::vector< unsigned char > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< unsigned char > & type is null", 0);
+    return 0;
+  } 
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  result = (arg1)->ale_resizeBilinearGray(*arg2,arg3,arg4,arg5,arg6);
+  jresult = new std::vector< unsigned char >((const std::vector< unsigned char > &)result); 
+  return jresult;
 }
 
 
@@ -3503,30 +4592,6 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Xitari_XitariALE_ale_getSnapshotLength(void * 
   result = (int)((XitariALE const *)arg1)->ale_getSnapshotLength();
   jresult = result; 
   return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_saveSnapshot(void * jarg1, void * jarg2, unsigned long jarg3) {
-  XitariALE *arg1 = (XitariALE *) 0 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
-  size_t arg3 ;
-  
-  arg1 = (XitariALE *)jarg1; 
-  arg2 = (uint8_t *)jarg2; 
-  arg3 = (size_t)jarg3; 
-  ((XitariALE const *)arg1)->ale_saveSnapshot(arg2,arg3);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Xitari_XitariALE_ale_restoreSnapshot(void * jarg1, void * jarg2, unsigned long jarg3) {
-  XitariALE *arg1 = (XitariALE *) 0 ;
-  uint8_t *arg2 = (uint8_t *) 0 ;
-  size_t arg3 ;
-  
-  arg1 = (XitariALE *)jarg1; 
-  arg2 = (uint8_t *)jarg2; 
-  arg3 = (size_t)jarg3; 
-  (arg1)->ale_restoreSnapshot((uint8_t const *)arg2,arg3);
 }
 
 
