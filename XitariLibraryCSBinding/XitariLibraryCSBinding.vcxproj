@@ -90,6 +90,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="circular_queue.h" />
     <ClInclude Include="XitariALE.h" />
     <ClInclude Include="xitari_cs_wrap.h" />
   </ItemGroup>

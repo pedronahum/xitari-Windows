@@ -15,10 +15,11 @@ namespace {
 }
 
 
-XitariALE::XitariALE(const char* rom_file)
+XitariALE::XitariALE(const char* rom_file) : _h(4), s(0)
 {
 	std::lock_guard<std::mutex> lg(ale_global_lock);
 	_ale.reset(new ale::ALEInterface(rom_file));
+	s.clear();
 
 }
 
@@ -82,15 +83,39 @@ std::vector<unsigned char> XitariALE::ale_getRescaledYChannelScreen()
 
 }
 
+std::vector<float> XitariALE::ale_getRescaledYChannelScreenHistory()
+{
+	// We need to call this function to activate the history process
+	// TODO: Clean this up!!!!
+	auto rescaled_y_channel = XitariALE::ale_getRescaledYChannelScreen();
+	
+	return s;
+
+}
+//std::vector<unsigned char>          ale_resizeBilinearGray(std::vector<unsigned char> & pixels, const int w, const int h, const int w2, const int h2);
 std::vector<unsigned char> XitariALE::ale_resizeBilinearGray(std::vector<unsigned char> & pixels, const int w,const int h,const int w2, const int h2)
 {
-	
+
+	/*
+	 * This is a hack to reduce the amount of operations / copies
+	 */
+
+	if (_h.full()) _h.Pop();
+	const int stride = w2*h2;
+	// Then copy it to the current state.
+	// Stride hard coded.
+	auto &item = _h.ItemPush();
+	item.resize(stride);
+	auto state_output = &item[0];
+	_h.Push();
+
 	std::vector<uint8_t> temp(w2*h2);
 	int A, B, C, D, x, y, gray;
 	const float x_ratio = ((float)(w - 1)) / w2;
 	const float y_ratio = ((float)(h - 1)) / h2;
 	float ya, yb;
 	int offset = 0;
+	int offset2 = 0;
 	for (int i = 0; i<h2; i++) {
 		for (int j = 0; j<w2; j++) {
 			x = static_cast<int>(x_ratio * j);
@@ -110,8 +135,24 @@ std::vector<unsigned char> XitariALE::ale_resizeBilinearGray(std::vector<unsigne
 				C * (y_diff) * (1 - x_diff) + D * (x_diff * y_diff)));
 
 			temp[offset++] = gray;
+			state_output[offset2++] = gray;
 		}
 	}
+
+	/*
+	* This is a hack to reduce the amount of operations / copies
+	*/
+	// Then you put all the history state to game state.
+	s.resize(_h.maxlen() * stride);
+	for (int i = 0; i < _h.size(); ++i) {
+		const auto &v = _h.get_from_push(i);
+		std::copy(v.begin(), v.end(), &s[i * stride]);
+	}
+	if (_h.size() < _h.maxlen()) {
+		const int n_missing = _h.maxlen() - _h.size();
+		::memset(&s[_h.size() * stride], 0, sizeof(float) * sizeof(n_missing * stride));
+	}
+
 	return temp;
 
 }

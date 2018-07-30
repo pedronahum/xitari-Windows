@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include "../Source/ale_interface.hpp"
+#include "circular_queue.h"
 
 // explicit declare
 typedef unsigned char uint8_t;
@@ -10,6 +11,11 @@ class XitariALE
 private:
 	//ale::ALEInterface* _ale;
 	std::unique_ptr<ale::ALEInterface> _ale;
+
+	CircularQueue<std::vector<float>> _h;
+
+	std::vector<float> s;
+
 public:
 	XitariALE(const char *rom_file);
 
@@ -61,12 +67,15 @@ public:
 
 	void ale_getScreenRGB(std::vector<unsigned char> & rgb);
 
-
+	// Returns a 84x84 rescaled YChannel array 
 	std::vector<unsigned char> ale_getRescaledYChannelScreen();
+
+	// Returns the 4 latest rescaled YChannel arrays
+	std::vector<float> ale_getRescaledYChannelScreenHistory();
 
 	void ale_fillRgb2yFromPalette(std::vector<unsigned char> & y, std::vector<unsigned char> & obs, size_t y_size, size_t obs_size);
 
-	std::vector<unsigned char> ale_resizeBilinearGray(std::vector<unsigned char> & y, const int w, const int h, const int w2, const int h2);
+	std::vector<unsigned char> ale_resizeBilinearGray(std::vector<unsigned char> & pixels, const int w, const int h, const int w2, const int h2);
 
 	// Returns the number of legal actions
 	int ale_numLegalActions();
